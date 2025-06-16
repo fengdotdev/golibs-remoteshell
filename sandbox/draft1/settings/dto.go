@@ -15,13 +15,3 @@ func (dto *SettingsDTO) String() string {
 		"Password: " + dto.Password +
 		"}"
 }
-
-func (dto *SettingsDTO) ToGOB() ([]byte, error) {
-
-}
-
-func (dto *SettingsDTO) FromGOB(data []byte) error {
-	// Implement the logic to decode the GOB data into the SettingsDTO struct.
-	// This is a placeholder implementation.
-	return nil
-}
