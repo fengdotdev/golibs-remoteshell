@@ -8,6 +8,14 @@ func New(key, user, password string) *Settings {
 	}
 }
 
+func NewZeroSettings() *Settings {
+	return &Settings{
+		key:      "",
+		user:     "",
+		password: "",
+	}
+}
+
 func NewSettingsFromDTO(dto SettingsDTO) (*Settings, error) {
 	s := &Settings{}
 	if err := s.FromDTO(dto); err != nil {

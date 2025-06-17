@@ -12,7 +12,7 @@ var _ GOB = (*Settings)(nil)
 func (s *Settings) FromGOB(data []byte) error {
 	dto, err := NewDTOFromGOB(data)
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to read GOB data: %w", err)
 	}
 
 	if dto.Version != version {
